@@ -6,6 +6,8 @@ function ctrl_c() {
   exit 0
 }
 
+# TODO: Integrate https://github.com/boxboat/fixuid to add host docker group
+
 # entrypoint.sh file for starting the xvfb with better screen resolution, configuring and running the vnc server.
 rm /tmp/.X1-lock 2> /dev/null &
 /opt/noVNC/utils/launch.sh --vnc localhost:$VNC_PORT --listen $NO_VNC_PORT &
